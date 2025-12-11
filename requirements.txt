@@ -21,4 +21,5 @@ XlsxWriter==3.2.0
 zipp==3.21.0
 mysql-connector-python
 pymysql
+pytz
 
