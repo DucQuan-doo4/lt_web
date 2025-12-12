@@ -3,10 +3,10 @@ import mysql.connector
 from flask_bcrypt import Bcrypt
 
 DB_CONFIG = {
-    'host': 'yamanote.proxy.rlwy.net',
-    'port': 19786,
+    'host': 'crossover.proxy.rlwy.net',
+    'port': 58473,
     'user': 'root',
-    'password': 'nKkMeIRTbUJNfSObgiTTRPGXEfbGqSZV',
+    'password': 'KYMHrgHZkfhNCpPoPmbXQrzbZzOoovpr',
     'database': 'railway'
 }
 
