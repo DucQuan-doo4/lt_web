@@ -2,13 +2,14 @@
 import mysql.connector
 from flask_bcrypt import Bcrypt
 
+# Cấu hình cơ sở dữ liệu
 DB_CONFIG = {
-    'host': 'yamanote.proxy.rlwy.net',
-    'port': 59944,
+    'host': 'interchange.proxy.rlwy.net',
+    'port': 53899,
     'user': 'root',
-    'password': 'kZECoZOnkJuGLrMbcmOKvnfUKBSrzYgc',
+    'password': 'RXViUPWsGSczTAaATjbOpCzJsfDWRuAX',
     'database': 'railway'
-}
+}}
 
 def get_db_connection():
     try:
