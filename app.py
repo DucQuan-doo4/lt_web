@@ -11,10 +11,10 @@ from mysql.connector.conversion import MySQLConverter  # ← Dùng để ép ki�
 
 # Cấu hình cơ sở dữ liệu
 DB_CONFIG = {
-    'host': 'yamanote.proxy.rlwy.net',
-    'port': 59944,
+    'host': 'interchange.proxy.rlwy.net',
+    'port': 53899,
     'user': 'root',
-    'password': 'kZECoZOnkJuGLrMbcmOKvnfUKBSrzYgc',
+    'password': 'RXViUPWsGSczTAaATjbOpCzJsfDWRuAX',
     'database': 'railway'
 }
 
@@ -145,13 +145,8 @@ def login():
             return redirect(url_for('login'))
         try:
             with conn.cursor() as c:  # Cải tiến: Sử dụng with
-                c.execute("""
-                    SELECT id, username, email, password_hash, role
-                    FROM users
-                    WHERE email = %s
-                """, (email,))
+                c.execute('SELECT * FROM users WHERE email = %s', (email,))  # Sửa lỗi: ? → %s
                 user = c.fetchone()
-
                 if user and bcrypt.check_password_hash(user[3], password):
                     session['user_id'] = user[0]
                     session['username'] = user[1]
