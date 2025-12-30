@@ -11,10 +11,10 @@ from mysql.connector.conversion import MySQLConverter  # ← Dùng để ép ki�
 
 # Cấu hình cơ sở dữ liệu
 DB_CONFIG = {
-    'host': 'crossover.proxy.rlwy.net',
-    'port': 58473,
+    'host': 'yamanote.proxy.rlwy.net',
+    'port': 59944,
     'user': 'root',
-    'password': 'KYMHrgHZkfhNCpPoPmbXQrzbZzOoovpr',
+    'password': 'kZECoZOnkJuGLrMbcmOKvnfUKBSrzYgc',
     'database': 'railway'
 }
 
