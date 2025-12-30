@@ -145,8 +145,13 @@ def login():
             return redirect(url_for('login'))
         try:
             with conn.cursor() as c:  # Cải tiến: Sử dụng with
-                c.execute('SELECT * FROM users WHERE email = %s', (email,))  # Sửa lỗi: ? → %s
+                c.execute("""
+                    SELECT id, username, email, password_hash, role
+                    FROM users
+                    WHERE email = %s
+                """, (email,))
                 user = c.fetchone()
+
                 if user and bcrypt.check_password_hash(user[3], password):
                     session['user_id'] = user[0]
                     session['username'] = user[1]
